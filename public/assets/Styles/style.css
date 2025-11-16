@@ -1,0 +1,830 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background: #25395f;
+    margin: 0;
+    padding: 0;
+}
+.top-header{
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-style:unset;
+    font-weight: bold;
+    justify-content: center;
+    padding-top: 0px;
+}
+
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0; /* Añade esto */
+    padding: 10px; /* Añade esto */
+
+}
+
+.menu-horizontal > li{
+    display: flex; /* Cambia a flex */
+    align-items: center; /* Centra verticalmente */
+    position: relative; /* Añade esto para que el menú vertical se posicione respecto al li */
+    margin-left: 100px;
+}
+
+.menu-horizontal > li > a{ /* Estiliza los enlaces */
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu-horizontal > li > a:hover{
+    color: rgb(172, 163, 163);
+}
+
+.btn-cuenta {
+    display: flex; /* Usa flex */
+    padding: 0 !important; /* Quita el padding heredado */
+}
+
+.btn-cuenta img{
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+.menu-vertical{
+    padding: 0;
+    position: absolute;
+    display: none;
+    width: 200px;
+    background-color: rgba(204, 202, 195, 0.808);
+    color: black;
+    margin-top: 15px; /* Ajusta la posición */
+    top: 70%; /* Cambia margin-top por top: 100% */
+    border-radius: 25px;
+}
+
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+
+.menu-horizontal > li:last-child .menu-vertical {
+    left: auto;
+    right: 0;
+    border-radius: 25px;
+}
+
+.menu-vertical li:hover { 
+    background-color: rgba(189, 184, 184, 0.356);
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.menu-vertical li{
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 15px 15px 15px 15px;
+    border-radius: 25px;;
+}
+.menu-vertical li a{
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-right: 4rem;
+}
+
+
+main{
+    flex: 1;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    padding: 8rem;
+    margin: 9.5rem;
+    margin-bottom: 13rem;
+    align-items: center;
+}
+
+.hero img {
+  height: 400px;
+}
+
+.text{
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+    margin-left: 10rem;
+    background-color: #116e998a;
+    color: white;
+    padding: 2rem;
+    border-radius: 25px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 3rem
+}
+.text > h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 50px;
+}
+.text > p{
+    text-align: justify;
+    margin-bottom: 3rem;
+    font-size: 20px;
+}
+.comenzar-button{
+    justify-self: center;
+    
+}
+.comenzar-btn{
+    background-color:#1487BF;
+    border: none;
+    border-radius: 15px;
+    color:white;
+    height: 2.5rem;
+    width: 9rem;
+    cursor: pointer;
+    place-items: center;
+    font-size: 20px;
+}
+
+.btn-inicio {
+    display: flex; /* Usa flex */
+    padding: 0 !important; /* Quita el padding heredado */
+}
+
+.btn-inicio img{
+    margin-left: 10px;
+    height: 70px;
+    width: 125px;
+    display: block;
+}
+
+/*Estilos para la seccion de Monitoreo*/
+
+.parent-monitoreo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: center;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.top-monitoreo {
+    grid-area: 1 / 2 / 2 / 6;
+    justify-items: center;
+    padding: 2rem;
+    color: black !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.top-monitoreo h1 {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 50px;
+    font-weight:bold;
+}
+.top-monitoreo p {
+    text-align: center;
+    font-size: 20px;
+}
+.div-condiciones {
+    grid-area: 2 / 1 / 3 / 3; 
+    background-color: #0E5B80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+    padding: 2rem 9rem 2rem 9rem;
+    border-radius: 15px;
+    width: 100px;
+    height: 40px;
+}
+.div-condiciones p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.div-alerta {
+    grid-area: 2 / 3 / 3 / 5;
+    background-color: #0E5B80;
+    background-color: #0E5B80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+    padding: 2rem 9rem 2rem 9rem;
+    border-radius: 15px;
+    width: 100px;
+    height: 40px;
+}
+.div-alerta p{
+    text-align: justify;
+    font-size: 25px;
+    font-weight: bold;
+}
+.div-historial {
+    grid-area: 2 / 5 / 3 / 7; 
+    background-color: #0E5B80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+    padding: 2rem 9rem 2rem 9rem;
+    border-radius: 15px;
+    width: 100px;
+    height: 40px;
+}
+.div-historial p{
+    text-align: justify;
+    font-size: 25px;
+    font-weight: bold;
+}
+.div-temp {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: #0E5B80;
+    margin: 4rem;
+    padding: 2rem 4rem 2rem 4rem;
+    justify-items: center;
+    border-radius: 15px;
+    margin-right: 0;
+}
+.logo-temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.logo-temp img {
+    height: 40px;
+    width: 40px;
+}
+.logo-vis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.logo-vis img {
+    height: 40px;
+    width: 40px;
+}
+.div-vision {
+    grid-area: 3 / 2 / 4 / 3; 
+    background-color: #0E5B80;
+    margin: 4rem;
+    padding: 2rem 5rem 2rem 5rem;
+    margin-left: 0;
+    justify-items: center;
+    border-radius: 15px;
+}
+.div-vientos { 
+    grid-area: 3 / 3 / 4 / 5;
+    background-color: #0E5B80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 10px;
+    margin: 4rem;
+    padding: 2rem 4rem 2rem 4rem;
+    border-radius: 15px;
+}
+.div-vientos img {
+    height: 80px;
+    width: 80px;
+}
+
+/*LUGAR DEL CALOR*/
+
+.div-calor {
+   grid-area: 3 / 5 / 4 / 7;
+       background-color: #0E5B80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 10px;
+    padding: 2rem 4rem 2rem 4rem;
+    border-radius: 15px;
+}
+.div-calor img {
+    height: 80px;
+    width: 80px;
+}
+.text-sol {
+    justify-items: center;
+}
+
+.div-riesgo {
+    grid-area: 4 / 1 / 5 / 3;
+    background-color: #0E5B80;
+    margin: 4rem;
+    padding: 2rem 4rem 2rem 4rem;
+    justify-items: center;
+    border-radius: 15px;
+}
+.logo-riesgo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.logo-riesgo img {
+    height: 40px;
+    width: 40px;
+}
+.div-oleaje { grid-area: 4 / 3 / 5 / 5;
+    background-color: #0E5B80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 4rem;
+    padding: 2rem 4rem 2rem 4rem;
+    border-radius: 15px;
+}
+.div-oleaje img {
+    height: 80px;
+    width: 80px;
+}
+.text-olas {
+    justify-items: center;
+}
+.div-lluvia {
+    grid-area: 4 / 5 / 5 / 7;
+    background-color: #0E5B80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 10px;
+    margin: 4rem;
+    padding: 2rem 4rem 2rem 4rem;
+    border-radius: 15px;
+}
+.div-lluvia img {
+    height: 80px;
+    width: 80px;
+}
+.text-lluvia {
+    justify-items: center;
+}
+
+/*Style para seguridad*/
+.seguridad-hero{
+    background-color: #1487BF;
+    padding: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.seguridad-hero h1{
+    color: white;
+    padding: 2rem;
+    padding-bottom: 0;
+    padding-left: 4rem;
+}
+.div-alertasP{
+    display: flex;
+    margin: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    gap: 5rem;
+    background-color: #D9D9D9;
+    padding: 1rem;
+    padding-left: 3rem;
+    border-radius: 25px;
+    height: 100px;
+}
+.div-alertasP img{
+    width: 50px;
+    height: 50px;
+    padding-top: 25px;
+    justify-self:last baseline;
+}
+.div-alertasP h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn-alerta{
+    border: none;
+    background-color: #40E0D0;
+    height: 50px;
+    margin-top: 1.5rem;
+    border-radius: 25px;
+    font-size: 20px;
+}
+.btn-alerta a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem 3rem 1rem 3rem;
+}
+.btn-corriente{
+    background-color: #0C4B69;
+    margin: 0 3rem 0 3rem;
+    padding: 1rem;
+}
+.btn-corriente img{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-self: center;
+}
+.div-videosE{
+    margin: 5rem;
+    margin-top: 1rem;
+}
+.div-videosE img{
+    width: 400px;
+    height: 400px;
+    margin: 4rem;
+    border-radius:50px;
+}
+
+
+/*Style para mapas*/
+
+.mapas-hero{
+    background-color: #0C4B69;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.parent-mapas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.div-mapa {
+    grid-area: 1 / 1 / 2 / 2; 
+    display: flex;
+    justify-content: center;
+}
+.div-mapa img{
+    width: 600px;
+    height: 300px;
+    margin: 5rem;
+    border-radius: 25px;
+}
+.div-texmap { grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
+}
+.div-texnoti { grid-area: 2 / 1 / 3 / 2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
+}
+.div-piscina {
+    grid-area: 2 / 2 / 3 / 3; 
+    display: flex;
+    justify-content: center;
+}
+.div-piscina img{
+    width: 400px;
+    height: 400px;
+    margin: 5rem;
+    margin-top: 0rem;
+    border-radius: 25px;
+    justify-self: center;
+}
+
+/*Style para contactanos*/
+.parent-contactanosTop {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div-toptext { grid-area: 1 / 1 / 2 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.div-x { grid-area: 2 / 1 / 3 / 2; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes-x{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color:#0c4c6900;
+    border: none;
+    gap: 2rem;
+}
+.redes-x img{
+    width: 74px;
+    height: 74px;
+}
+.redes-x h3{
+    background-color: #0C4B69;
+    padding: 1.5rem;
+    width: 150px;
+}
+.redes-x:hover{
+    cursor: pointer;
+}
+
+
+.div-f { grid-area: 3 / 1 / 4 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes-f{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color:#0c4c6900;
+    border: none;
+    gap: 2rem;
+}
+.redes-f img{
+    width: 74px;
+    height: 74px;
+}
+.redes-f h3{
+    background-color: #0C4B69;
+    padding: 1.5rem;
+    width: 150px;
+}
+.redes-f:hover{
+    cursor: pointer;
+}
+
+
+
+.div-i { grid-area: 4 / 1 / 5 / 2; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes-i{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color:#0c4c6900;
+    border: none;
+    gap: 2rem;
+}
+.redes-i img{
+    width: 74px;
+    height: 74px;
+}
+.redes-i h3{
+    background-color: #0C4B69;
+    padding: 1.5rem;
+    width: 150px;
+}
+.redes-i:hover{
+    cursor: pointer;
+}
+
+
+
+.div-w { grid-area: 2 / 3 / 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes-w{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: #116e9900;
+    border: none;
+}
+.redes-w img{
+    width: 74px;
+    height: 74px;
+}
+.redes-w h3{
+    background-color: #1487BF;
+    padding: 1.5rem;
+    width: 150px;
+}
+.redes-w:hover{
+    cursor: pointer;
+}
+
+
+.div-t {
+    grid-area: 3 / 3 / 4 / 4; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes-t{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: #116e9900;
+    border: none;
+}
+.redes-t img{
+    width: 74px;
+    height: 74px;
+}
+.redes-t h3{
+    background-color: #1487BF;
+    padding: 1.5rem;
+    width: 150px;
+}
+.redes-t:hover{
+    cursor: pointer;
+}
+
+
+.div-y { 
+    grid-area: 4 / 3 / 5 / 4;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.redes-y{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: #116e9900;
+    border: none;
+}
+.redes-y img{
+    width: 74px;
+    height: 74px;
+}
+.redes-y h3{
+    background-color: #1487BF;
+    padding: 1.5rem;
+    width: 150px;
+}
+.redes-y:hover{
+    cursor: pointer;
+}
+
+/*Style para nosotros*/
+
+/*Style para nosotros*/
+
+.nosotros-hero{
+    font-family: "Poppins", sans-serif;
+}
+.parent-nosotros {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0;
+grid-row-gap: 0px;
+}
+
+.div-nosotros {
+    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0C4B69;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.div-nosotros img{
+    width: 40px;
+    height: 40px;
+}
+.div-nosotros p{
+    width: 700px;
+    text-align: center;
+}
+.div-vis {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1487BF;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.div-vis img{
+    width: 70px;
+    height: 70px;
+}
+.div-vis p{
+    width: 400px;
+    text-align: center;
+}
+.div-mision {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #40E0D0;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.div-mision img{
+    width: 70px;
+    height: 70px;
+}
+.div-mision p{
+    width: 400px;
+    text-align: center;
+}
+
+/*Style para contactanos*/
+.contactanos-hero{
+    font-family: "Poppins", sans-serif;
+    padding: 5rem 5rem 0 5rem;
+    height: 600px;
+    background-color: #0E5B80;
+    align-items: center;
+}
+.contactanos-hero a{
+    text-decoration: none;
+    color: black;
+}
+.contactanos-hero a:hover{
+    color:#253754
+}
+
+.parent-contactanos{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+height: 550px;
+
+}
+
+.div-redes { grid-area: 1 / 1 / 4 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.div-redes img{
+    width: 40px;
+    height: 40px;
+    margin: 1rem;
+}
+.div-mapas { grid-area: 3 / 2 / 4 / 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.div-mapas img{
+    border-radius: 25px;
+}
+.div-info { grid-area: 1 / 2 / 3 / 3; 
+display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.div-herramientas { grid-area: 1 / 3 / 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.div-explora { grid-area: 1 / 4 / 3 / 5; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.div-consejos { grid-area: 1 / 5 / 3 / 6; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
