@@ -40,3 +40,32 @@
     height: 100%;
     object-fit: cover;
 }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .pronostico-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .pronostico-content {
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .forecast-grid {
+        grid-template-columns: 1fr; /* Una sola columna en celular */
+    }
+
+    .pronostico-image {
+        width: 100%;
+        height: 200px;
+        display: block; /* Asegurar que se vea */
+    }
+    
+    .pronostico-image img {
+        width: 100%;
+    }
+}

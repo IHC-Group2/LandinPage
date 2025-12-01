@@ -99,3 +99,79 @@
         min-height: 300px;
     }
 }
+
+/* --- REEMPLAZAR EL CONTENIDO DE LA COLUMNA DE MAPA --- */
+
+.reportes-container {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+.control-column {
+    flex: 1;
+    background-color: #0a2f35;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10; /* Asegura que los controles estén sobre el fondo si colapsa */
+}
+
+/* NUEVO ESTILO: Mapa como fondo */
+.map-column {
+    flex: 2;
+    position: relative;
+    /* Imagen de fondo en lugar de etiqueta <img> */
+    background-image: url('../../Imagenes/mapa2.jpg');
+    background-size: cover; /* Cubre todo el espacio sin deformarse */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1; /* Nivel bajo para no tapar el menú */
+}
+
+/* Eliminamos estilos de img que ya no existen */
+.map-column img {
+    display: none;
+}
+
+.map-marker {
+    position: absolute;
+    top: 50%; /* Centrado o donde desees */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    z-index: 2; /* Encima del mapa, pero debajo del menú */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .reportes-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .map-column {
+        height: 50vh; /* Altura fija en celular */
+        width: 100%;
+    }
+}
+/* En public/assets/Styles/reportes.css */
+
+.map-column {
+    flex: 2;
+    position: relative;
+    /* NUEVO: Mapa como fondo */
+    background-image: url('../../Imagenes/mapa2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Asegura que quede detrás del menú */
+}
+
+/* ELIMINA o comenta la regla antigua de .map-column img */
+/* .map-column img { width: 100%; ... }  <-- BORRAR ESTO */

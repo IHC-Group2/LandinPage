@@ -931,3 +931,51 @@ display: flex;
     z-index: 1001;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
+/* En public/assets/Styles/style.css */
+
+.menu-toggle {
+    display: none; /* Oculto en PC */
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Visible en celular */
+        z-index: 1002;
+    }
+    
+    .menu-horizontal {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Ajustar según altura de tu navbar */
+        left: 0;
+        background-color: white;
+        z-index: 1001;
+        padding-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .menu-horizontal.active {
+        display: flex;
+    }
+    
+    .menu-horizontal li {
+        width: 100%;
+        text-align: center;
+    }
+}

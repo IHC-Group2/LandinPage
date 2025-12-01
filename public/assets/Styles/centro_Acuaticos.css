@@ -145,3 +145,73 @@ body, html {
     }
 }
 
+/* --- public/assets/Styles/centro_Acuaticos.css --- */
+
+/* ... (Mantén tus estilos generales anteriores como body, html, .main2, .columna-control etc.) ... */
+
+/* CAMBIO EN LA COLUMNA MAPA PARA FONDO */
+.columna-mapa {
+    width: 65%;
+    position: relative;
+    background-image: url('../../Imagenes/mapa2.jpg'); /* Ruta corregida */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* NUEVOS ESTILOS PARA MARCADORES EN LISTAS */
+.marker {
+    position: absolute;
+    font-size: 2rem; /* Tamaño de la bandera */
+    cursor: pointer;
+    transform: translate(-50%, -100%); /* Centrar la punta de la bandera */
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+    transition: transform 0.2s;
+}
+
+.marker:hover {
+    transform: translate(-50%, -120%) scale(1.2);
+    z-index: 100;
+}
+
+/* Tooltip mejorado */
+.tooltip {
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: translate(-50%, -160%); /* Encima de la bandera */
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+/* Mostrar tooltip al pasar el mouse por el marcador correspondiente */
+.marker:hover + .tooltip {
+    opacity: 1;
+}
+
+/* --- CLASES DE COLOR PARA BANDERAS --- */
+.marker.rojo { content: '🚩'; color: #dc3545; text-shadow: 0 0 0 #dc3545; }
+.marker.amarillo { content: '🚩'; color: #ffc107; text-shadow: 0 0 0 #ffc107; }
+.marker.verde { content: '🚩'; color: #28a745; text-shadow: 0 0 0 #28a745; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .main2 {
+        flex-direction: column;
+        height: auto;
+    }
+    .columna-control {
+        width: 100%;
+        max-height: 40vh;
+    }
+    .columna-mapa {
+        width: 100%;
+        height: 50vh;
+    }
+}

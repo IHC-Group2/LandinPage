@@ -9,31 +9,57 @@
 </head>
 <body>
     <nav class="top-header">
-        <div class="hamburger-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+        <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.menu-horizontal').classList.toggle('active')">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <ul class="menu-horizontal">
             <li>
                 <a href="index.html" class="btn-inicio">
                     <img src="Imagenes/logo.png" alt="Imagen de inicio">
                 </a>
             </li>
-            <li> <a href="#">INICIO</a></li>
-            <li> <a href="#Monitoreo">MONITOREO</a></li>
-            <li><a href="#Seguridad">SEGURIDAD</a></li>
-            <li><a href="#Mapas">MAPAS</a></li>
+            <li> <a href="index.html" style="opacity: 0.8;">INICIO</a></li>
+            
             <li>
-                <a href="#Contactanos">CONTACTANOS</a>
+                <a href="Monitoreo.html" class="menu-highlight">MONITOREO EN VIVO</a>
                 <ul class="menu-vertical">
-                    <li>WhatsApp</li>
-                    <li>Instagram</li>
+                    <li><a href="Entrenamiento.html">Entrenamiento</a></li>
+                    <li><a href="MonitoreoUser.html">Mi Estado</a></li>
+                    <li><a href="DispositivosConectados.html">Dispositivos</a></li>
                 </ul>
             </li>
-            <li><a href="#Nosotros">NOSOTROS</a></li>
+
             <li>
-                <a href="login.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="imagen de cuenta"></a>
+                <a href="#Seguridad">PREVENCIÓN</a>
+                <ul class="menu-vertical">
+                    <li><a href="pronostico.html">Pronóstico</a></li>
+                    <li><a href="historial_salud.html">Historial de Salud</a></li>
+                    <li><a href="Ayuda.html">Guía de Uso</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="reportes.html" class="menu-highlight">MAPAS Y LUGARES</a>
+                <ul class="menu-vertical">
+                    <li><a href="reportes.html">Hacer un reporte</a></li>
+                    <li><a href="reportes_recibidos.html">Ver reportes</a></li>
+                    <li><a href="centro_Acuaticos.html">Centros Acuáticos</a></li>
+                    <li><a href="Configuracion.html">⭐ Lugares Guardados</a></li> 
+                </ul>
+            </li>
+
+            <li>
+                <a href="#Contactanos" style="opacity: 0.8;">CONTACTO</a>
+            </li>
+            
+            <li>
+                <a href="LoggedIndex.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="Cuenta"></a>
+                <ul class="menu-vertical">
+                    <li><a href="Configuracion.html">Configuración</a></li>
+                    <li><a href="index.html">Cerrar Sesión</a></li>
+                </ul>
             </li>
         </ul>
     </nav>

@@ -156,3 +156,114 @@
         width: 100%;
     }
 }
+/* --- public/assets/Styles/reportes_recibidos.css --- */
+
+.reportes-main {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+.columna-control {
+    flex: 1;
+    background-color: #50e3c2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+
+/* Mapa como fondo */
+.columna-mapa {
+    flex: 2;
+    position: relative;
+    background-image: url('../../Imagenes/mapa2.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.columna-mapa img {
+    display: none;
+}
+
+/* ESTILOS DE MARCADORES (BANDERITAS) */
+.marcador-mapa {
+    position: absolute;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 2;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    /* Transición suave para hover */
+    transition: transform 0.2s;
+}
+
+.marcador-mapa:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* Icono de Bandera antes del título */
+.marcador-mapa strong::before {
+    content: '🚩';
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* --- NIVELES DE PELIGRO (SEMÁFORO) --- */
+
+/* ROJO: Peligro Alto */
+.marcador-mapa.nivel-alto {
+    border-left: 6px solid #dc3545; /* Borde rojo */
+}
+.marcador-mapa.nivel-alto strong::before {
+    text-shadow: 0 0 0 #dc3545; /* Colorea el emoji en algunos navegadores */
+    color: #dc3545;
+}
+.marcador-mapa.nivel-alto p {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* AMARILLO: Peligro Medio */
+.marcador-mapa.nivel-medio {
+    border-left: 6px solid #ffc107; /* Borde amarillo */
+}
+.marcador-mapa.nivel-medio strong::before {
+    text-shadow: 0 0 0 #ffc107;
+    color: #ffc107;
+}
+.marcador-mapa.nivel-medio p {
+    color: #d39e00;
+    font-weight: bold;
+}
+
+/* VERDE: Seguro/Bajo */
+.marcador-mapa.nivel-bajo {
+    border-left: 6px solid #28a745; /* Borde verde */
+}
+.marcador-mapa.nivel-bajo strong::before {
+    text-shadow: 0 0 0 #28a745;
+    color: #28a745;
+}
+.marcador-mapa.nivel-bajo p {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .reportes-main {
+        flex-direction: column;
+        height: auto;
+    }
+    .columna-mapa {
+        height: 50vh;
+        width: 100%;
+    }
+}
