@@ -1,0 +1,16 @@
+.config-menu{
+    width: 320px;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10rem;
+}
+.texture-div{
+    margin: 2rem;
+}
+.color-div{
+    margin: 2rem
+}

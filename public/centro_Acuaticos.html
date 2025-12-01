@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centros Acuaticos</title>
+    <link rel="stylesheet" href="assets/Styles/style.css">
+    <link rel="stylesheet" href="assets/Styles/centro_Acuaticos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="top-header">
+        <ul class="menu-horizontal">
+            <li>
+                <a href="LoggedIndex.html" class="btn-inicio">
+                    <img src="Imagenes/logo.png" alt="Imagen de inicio">
+                </a>
+            </li>
+            <li> <a href="LoggedIndex.html">INICIO</a></li>
+            <li>
+                <a href="Monitoreo.html">MONITOREO</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="Entrenamiento.html">Entrenamiento</a>
+                    </li>
+                    <li>
+                        <a href="MonitoreoUser.html">Monitorear</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#Seguridad">SEGURIDAD</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="pronostico.html">Pronostico</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="reportes.html">MAPAS</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="reportes.html">Hacer un reporte</a>
+                    </li>
+                    <li>
+                        <a href="reportes_recibidos.html">Ver reportes</a>
+                    </li>
+                    <li>
+                        <a href="centro_Acuaticos.html">Centros Acuaticos</a>
+                    </li>
+                    <li>
+                        <a href="listasPlayasPiscina.html">Lista de playas y piscinas</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="Contactanos.html">CONTACTANOS</a>
+                <ul class="menu-vertical">
+                    <li>WhatsApp</li>
+                    <li>Instagram</li>
+                </ul>
+            </li>
+            <li><a href="Nosotro.html">NOSOTROS</a></li>
+            <li>
+                <a href="LoggedIndex.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="imagen de cuenta"></a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="Configuracion.html">Configuracion De Usuario</a>
+                    </li>
+                    <li>
+                        <a href="alertas_recibidas.html">Alertas Recibidas</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Cerrar Sesion</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main class="main2">
+        <div class="columna-control">
+            <div class="titulo-principal">
+                <h2>Centros de entrenamiento acuático</h2>
+            </div>
+            <div class="card">
+                <div class="card-icono"></div>
+                <div class="card-detalles">
+                    <h3>Centro de vigilancia costera</h3>
+                    <p>Este centro se dedica a la monitorización y vigilancia de las costas para garantizar la seguridad de los nadadores y surfistas.</p>
+                    <a href="#" class="btn-ver-mas">VER MÁS</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icono"></div>
+                <div class="card-detalles">
+                    <h3>Academia de surfistas y seguridad</h3>
+                    <p>Una academia para aprender a surfear de manera segura, con instructores certificados y enfocados en la seguridad acuática.</p>
+                    <a href="#" class="btn-ver-mas">VER MÁS</a>
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-icono"></div>
+                <div class="card-detalles">
+                    <h3>Club de Natación Oceánica</h3>
+                    <p>Club para nadadores de aguas abiertas con entrenamientos grupales y enfoque en técnica y resistencia.</p>
+                    <a href="#" class="btn-ver-mas">VER MÁS</a>
+                </div>
+            </div>
+        </div>
+        <div class="columna-mapa">
+            <!-- Markers -->
+            <div id="marker1" class="marker"></div>
+            <div id="marker2" class="marker"></div>
+            <div id="marker3" class="marker"></div>
+
+            <!-- Tooltips -->
+            <div id="tooltip1" class="tooltip">
+                Centro de vigilancia costera
+            </div>
+            <div id="tooltip2" class="tooltip">
+                Academia de surfistas y seguridad
+            </div>
+            <div id="tooltip3" class="tooltip">
+                Club de Natación Oceánica
+            </div>
+        </div>
+    </main>
+</body>
+</html>

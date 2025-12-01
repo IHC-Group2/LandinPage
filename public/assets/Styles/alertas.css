@@ -1,0 +1,46 @@
+.alertas-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.alertas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 2rem;
+}
+
+.alerta {
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.alerta h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.alerta p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+/* verde insertar */
+.alerta.leve {
+    background-color: #28a745; /* Green */
+}
+
+.alerta.medio {
+    background-color: #ffc107; /* Yellow */
+    color: #000;
+}
+
+.alerta.grave {
+    background-color: #dc3545; /* Red */
+}

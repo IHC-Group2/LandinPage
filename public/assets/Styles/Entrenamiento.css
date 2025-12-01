@@ -1,0 +1,72 @@
+.entrenamiento-section{
+    font-family: "Poppins", sans-serif;
+    margin: 2rem 15rem 0 15rem;
+    
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+}
+.entrenamiento-div{
+    background-color: rgba(138, 133, 125, 0.322);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 700px;
+    border-radius: 25px;
+    padding: 2rem;
+}
+
+.entrenamiento-div p{
+    background-color: #5da4c7;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: 25px;
+    margin: 0;
+}
+
+.fin-entrenamiento{
+    background-color: #1487BF;
+    border:none;
+    border-radius: 15px;
+    cursor: pointer;
+    place-items: center;
+    justify-self: center;
+    padding: 1rem;
+}
+.fin-entrenamiento:hover{
+    box-shadow: 2px 2px 5px black;
+    background-color: #5da4c7;
+}
+.fin-entrenamiento a{
+    text-decoration: none;
+    color: black;
+}
+.body-entrenamiento{
+    display: flex;
+    flex-direction:row;
+    gap: 8rem;
+}
+.calorias-entrenamiento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+.body-entrenamiento h3{
+    background-color: #5da4c7;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: 25px;
+    margin: 0;
+    height: 47px;
+    width: 75.5px;
+    text-align: center;
+}
+.estilo-entrenamiento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}

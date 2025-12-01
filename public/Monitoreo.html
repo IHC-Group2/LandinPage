@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/Styles/style.css">
+    <link rel="stylesheet" href="assets/Styles/Monitoreo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="top-header">
+        <ul class="menu-horizontal">
+            <li>
+                <a href="LoggedIndex.html" class="btn-inicio">
+                    <img src="Imagenes/logo.png" alt="Imagen de inicio">
+                </a>
+            </li>
+            <li> <a href="LoggedIndex.html">INICIO</a></li>
+            <li>
+                <a href="Monitoreo.html">MONITOREO</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="Entrenamiento.html">Entrenamiento</a>
+                    </li>
+                    <li>
+                        <a href="MonitoreoUser.html">Monitorear</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#Seguridad">SEGURIDAD</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="pronostico.html">Pronostico</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="reportes.html">MAPAS</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="reportes.html">Hacer un reporte</a>
+                    </li>
+                    <li>
+                        <a href="reportes_recibidos.html">Ver reportes</a>
+                    </li>
+                    <li>
+                        <a href="centro_Acuaticos.html">Centros Acuaticos</a>
+                    </li>
+                    <li>
+                        <a href="listasPlayasPiscina.html">Lista de playas y piscinas</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="Contactanos.html">CONTACTANOS</a>
+                <ul class="menu-vertical">
+                    <li>WhatsApp</li>
+                    <li>Instagram</li>
+                </ul>
+            </li>
+            <li><a href="Nosotro.html">NOSOTROS</a></li>
+            <li>
+                <a href="LoggedIndex.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="imagen de cuenta"></a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="Configuracion.html">Configuracion De Usuario</a>
+                    </li>
+                    <li>
+                        <a href="alertas_recibidas.html">Alertas Recibidas</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Cerrar Sesion</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section id="Monitoreo" class="monitoreo-hero">
+            <div class="parent-monitoreo">
+                <div class="top-monitoreo">
+                    <h1>MONITOREO</h1>
+                    <p>
+                        "Tegonologia que detecta, alerta y protege a 
+                                    cada deportista"
+                    </p>
+                    <select name="Condiciones del Lugar">
+                        <option value="One">Playa del Carmen</option>
+                        <option value="Two">Playa las tortugas</option>
+                        <option value="Three">Playa Punta Hermosa</option>
+                        <option value="FOur">Playa Embajadores</option>
+                        <option value="" selected="selected">Condiciones del Lugar</option>
+                    </select>
+                </div>
+                <div class="div-condiciones">
+                    <p>Condiciones Actuales</p>
+                </div>
+                <div class="div-alerta">
+                    <p>Alertas</p>
+                </div>
+                <div class="div-historial"> 
+                    <p>Historial</p>
+                </div>
+                <div class="div-temp">
+                    <p>Temperatura:</p>
+                    <div class="logo-temp">
+                        <img src="Imagenes/termometro.png" alt="Termometro Logo">
+                        <p>20°C</p>
+                    </div>
+                </div>
+                <div class="div-vision">    
+                    <p>Visibilidad:</p>
+                    <div class="logo-vis">
+                        <img src="Imagenes/ojo.png" alt="Ojo Logo">
+                        <p>3m</p>
+                    </div>
+                </div>
+                <div class="div-vientos">
+                    <img src="Imagenes/viento.png" alt="Viento Logo">
+                    <H3>VIENTOS FUERTES</H3>
+                </div>
+                <div class="div-calor">
+                    <img src="Imagenes/sol.png" alt="Sol Logo">
+                    <div class="text-sol">
+                        <h3>CALOR INTENSO</h3>
+                        <p>Ayer</p>
+                    </div>
+                </div>
+                <div class="div-riesgo">
+                    <h3>Nivel De Riesgo:</h3>
+                    <div class="logo-riesgo">
+                        <img src="Imagenes/medidor.png" alt="medidor Logo">
+                        <P>MEDIO</P>
+                    </div>
+                </div>
+                <div class="div-oleaje">
+                    <img src="Imagenes/olas.png" alt="Olas Logo">
+                    <div class="text-olas">
+                        <h3>OLEAJE INTENSO</h3>
+                        <p>20:39</p>
+                    </div>
+                </div>
+                <div class="div-lluvia">
+                    <img src="Imagenes/lluvia.png" alt="lluvia Logo">
+                    <div class="text-lluvia">
+                        <h3>LLUVIA MODERADA</h3>
+                        <p>Hoy</p>
+                </div>
+            </div>
+    </section>
+</body>
+</html>

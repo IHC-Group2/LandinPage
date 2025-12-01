@@ -4,21 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/Styles/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/Styles/AlertaPop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="top-header">
         <ul class="menu-horizontal">
             <li>
-                <a href="index.html" class="btn-inicio">
+                <a href="LoggedIndex.html" class="btn-inicio">
                     <img src="Imagenes/logo.png" alt="Imagen de inicio">
                 </a>
             </li>
-            <li> <a href="#">INICIO</a></li>
-            <li> <a href="#Monitoreo">MONITOREO</a></li>
-            <li><a href="#Seguridad">SEGURIDAD</a></li>
-            <li><a href="#Mapas">MAPAS</a></li>
+            <li> <a href="LoggedIndex.html">INICIO</a></li>
+            <li>
+                <a href="Monitoreo.html">MONITOREO</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="Entrenamiento.html">Entrenamiento</a>
+                    </li>
+                    <li>
+                        <a href="MonitoreoUser.html">Monitorear</a>
+                    </li>
+                    <li>
+                        <a href="DispositivosConectados.html">Dispositivos</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#Seguridad">SEGURIDAD</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="pronostico.html">Pronostico</a>
+                    </li>
+                    <li>
+                        <a href="historial_salud.html">Historial de Salud</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="reportes.html">MAPAS</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="reportes.html">Hacer un reporte</a>
+                    </li>
+                    <li>
+                        <a href="reportes_recibidos.html">Ver reportes</a>
+                    </li>
+                    <li>
+                        <a href="centro_Acuaticos.html">Centros Acuaticos</a>
+                    </li>
+                    <li>
+                        <a href="listasPlayasPiscina.html">Lista de playas y piscinas</a>
+                    </li>
+                </ul>
+            </li>
             <li>
                 <a href="#Contactanos">CONTACTANOS</a>
                 <ul class="menu-vertical">
@@ -26,9 +67,20 @@
                     <li>Instagram</li>
                 </ul>
             </li>
-            <li><a href="#Nosotros">NOSOTROS</a></li>
+            <li><a href="Nosotro.html">NOSOTROS</a></li>
             <li>
-                <a href="login.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="imagen de cuenta"></a>
+                <a href="LoggedIndex.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="imagen de cuenta"></a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="Configuracion.html">Configuracion De Usuario</a>
+                    </li>
+                    <li>
+                        <a href="alertas_recibidas.html">Alertas Recibidas</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Cerrar Sesion</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>
@@ -168,7 +220,7 @@
                 </div>
             </div>
         </section>
-        <section class="contactamosTop-hero" id="Contactanos">
+        <section class="contactamosTop-hero">
             <div class="parent-contactanosTop">
                 <div class="div-toptext">
                     <h2>Contactanos</h2>
@@ -214,7 +266,7 @@
                 </div>
             </div>
         </section>
-        <section class="nosotros-hero" id="Nosotros">
+        <section class="nosotros-hero">
             <div class="parent-nosotros">
                 <div class="div-nosotros">
                     <h1>NOSOTROS</h1>
@@ -267,11 +319,11 @@
                 </div>
                 <div class="div-mapas">
                     <img src="Imagenes/mapa.png" alt="Mapa Del Local">
-                    <h2>Oficinas de AquaSafe360</h2>
+                    <h2>Oficinas de GlucoSmart</h2>
                 </div>
                 <div class="div-info">
                     <h2>Información</h2>
-                    <a href="">Conoce mas sobre AquaSafe360</a>
+                    <a href="">Conoce mas sobre GlucoSmart</a>
                     <a href="">Nuesta Mision y Vision</a>
                     <a href="">Contactano</a>
                 </div>
@@ -294,5 +346,21 @@
             </div>
         </section>
     </main>
+    <div class="overlay-cargando">
+            <div class="indicador">
+                <p>
+                    ALERTA DE RIESGO
+                </p>
+                <p>
+                    LUGAR:___________________
+                </p>
+                <p>
+                    NIVEL DE RIESGO:ALTO
+                </p>
+                <button class="comenzar-btn">
+                    <a href="LoggedIndex.html">Aceptar</a>
+                </button>
+            </div>
+    </div>
 </body>
 </html>

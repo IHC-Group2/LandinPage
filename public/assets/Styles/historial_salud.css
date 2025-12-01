@@ -1,0 +1,146 @@
+body {
+    background-color: #e8e8e8;
+    font-family: 'Poppins', sans-serif;
+}
+
+.health-history-container {
+    display: flex;
+    min-height: 800px;
+    margin: 2rem;
+}
+
+.sidebar {
+    width: 250px;
+    padding-top: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.menu-item.active {
+    background-color: #d8d8d8;
+    position: relative;
+    width: calc(100% + 10px); /* Extend slightly to the right */
+}
+
+.menu-item .icon {
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item .icon .triangle {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 12px solid white;
+    transform: rotate(90deg);
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #d8d8d8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-filters {
+    margin-bottom: 20px;
+}
+
+.date-chip {
+    background-color: #c0c0c0;
+    border-radius: 15px;
+    padding: 8px 15px;
+    margin: 0 5px;
+    font-size: 14px;
+    border: 1px solid #a0a0a0;
+}
+
+.main-content h3 {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.chart-container {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    position: relative;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 10px;
+    height: 100%;
+    text-align: right;
+    color: #555;
+}
+
+.chart {
+    flex-grow: 1;
+    border-left: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0 10px;
+}
+
+.reference-line {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border-top: 1px dashed #ccc;
+    z-index: 0;
+}
+
+.bar {
+    width: 8%;
+    background-color: #007bff;
+    z-index: 1;
+    border-radius: 5px 5px 0 0;
+}
+
+.x-axis {
+    position: absolute;
+    bottom: -30px;
+    width: calc(100% - 40px); /* Adjust based on y-axis width */
+    left: 40px; /* Adjust based on y-axis width */
+    display: flex;
+    justify-content: space-around;
+    color: #555;
+}
+
+.search-button {
+    margin-top: 40px; /* Space above the button */
+    padding: 12px 30px;
+    background-color: #a0a0a0;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #888888;
+}

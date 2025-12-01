@@ -1,0 +1,18 @@
+.top-monitoreo select{
+    display: flex;
+    font-family:"Poppins", sans-serif;
+    padding: 1.5rem;
+    border-radius: 25px;
+    border: none;
+    background-color: #9DD5EF;
+}
+.top-monitoreo select:hover{
+    border: none;
+    cursor: pointer;
+}
+.top-monitoreo select option{
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+    border: none;
+    background-color: #9DD5EF;
+}

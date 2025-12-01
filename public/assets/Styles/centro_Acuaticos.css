@@ -1,0 +1,131 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5; /* A light background for the whole page */
+}
+
+/* Main content layout */
+.main2 {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust based on navbar height */
+}
+
+/* Left column styling */
+.columna-control {
+    width: 35%; /* Adjust width as needed */
+    background-color: #1f73ad;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between cards */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.titulo-principal {
+    background-color: #d3d3d3;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.titulo-principal h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden; /* Ensures the icon background doesn't spill out */
+    flex-shrink: 0;
+}
+
+.card-icono {
+    width: 100px; /* Fixed width for the icon placeholder */
+    background-color: #e6e6e6;
+    flex-shrink: 0; /* Prevents the icon area from shrinking */
+}
+
+.card-detalles {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-detalles h3 {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.card-detalles p {
+    margin: 0 0 15px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.btn-ver-mas {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-self: flex-start; /* Aligns button to the left */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Right column styling */
+.columna-mapa {
+    width: 65%; /* Adjust width as needed */
+    position: relative; /* For positioning tooltips */
+    background-image: url('../Imagenes/mapa2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 0.85em;
+    white-space: nowrap;
+    transform: translate(-50%, -150%); /* Position tooltip above the marker */
+}
+
+/* General marker style */
+.marker {
+    content: '📍';
+    position: absolute;
+    font-size: 2.5em;
+    transform: translate(-50%, -100%);
+}
+
+/* Specific marker and tooltip positions */
+#marker1 { top: 25%; left: 30%; }
+#tooltip1 { top: 25%; left: 30%; }
+
+#marker2 { top: 60%; left: 55%; }
+#tooltip2 { top: 60%; left: 55%; }
+
+#marker3 { top: 45%; left: 20%; }
+#tooltip3 { top: 45%; left: 20%; }

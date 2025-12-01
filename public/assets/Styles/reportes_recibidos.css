@@ -1,0 +1,103 @@
+.reportes-main {
+    display: flex;
+    height: calc(100vh - 70px); /* Ajustar altura menos el navbar */
+}
+
+.columna-control {
+    flex: 1;
+    background-color: #50e3c2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mapa-interactivo-header {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.mapa-interactivo-header h2 {
+    margin: 0;
+}
+
+.busqueda-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.filtro-alertas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filtro-accion {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.alerta-card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alerta-info h3 {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.alerta-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.alerta-reaccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.alerta-reaccion span {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.alerta-reaccion span:first-child {
+    color: green;
+}
+
+.alerta-reaccion span:last-child {
+    color: red;
+}
+
+.columna-mapa {
+    flex: 2;
+    position: relative;
+}
+
+.columna-mapa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.marcador-mapa {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}

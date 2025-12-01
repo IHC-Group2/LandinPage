@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    background-image: url('../fondo.jpg');
+    background-image: url('/Imagenes/fondo.jpg');
     background-color: rgba(150, 150, 150, 0.24);
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ body{
     justify-content: center;
     padding-top: 0px;
 }
-
+/*Cambios css en el menu horizontal*/
 .menu-horizontal{
     list-style: none;
     display: flex;
@@ -42,7 +42,7 @@ body{
     color: black;
     text-decoration: none;
 }
-
+/*menu hover*/
 .menu-horizontal > li > a:hover{
     color: rgb(172, 163, 163);
 }
@@ -161,7 +161,7 @@ main{
     display: flex; /* Usa flex */
     padding: 0 !important; /* Quita el padding heredado */
 }
-/* boton de inicio imagen*/
+
 .btn-inicio img{
     margin-left: 10px;
     height: 70px;
@@ -832,4 +832,41 @@ display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+.overlay-cargando {
+  position: fixed; /* Fija la posición en la ventana de visualización */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.indicador {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+}
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.comenzar-btn a{
+    text-decoration: none;
+    color: white;
 }

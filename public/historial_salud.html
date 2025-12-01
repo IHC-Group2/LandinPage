@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Salud</title>
+    <link rel="stylesheet" href="assets/Styles/style.css">
+    <link rel="stylesheet" href="assets/Styles/historial_salud.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="top-header">
+        <ul class="menu-horizontal">
+            <li>
+                <a href="LoggedIndex.html" class="btn-inicio">
+                    <img src="Imagenes/logo.png" alt="Imagen de inicio">
+                </a>
+            </li>
+            <li> <a href="LoggedIndex.html">INICIO</a></li>
+            <li>
+                <a href="Monitoreo.html">MONITOREO</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="Entrenamiento.html">Entrenamiento</a>
+                    </li>
+                    <li>
+                        <a href="MonitoreoUser.html">Monitorear</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#Seguridad">SEGURIDAD</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="pronostico.html">Pronostico</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="reportes.html">MAPAS</a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="reportes.html">Hacer un reporte</a>
+                    </li>
+                    <li>
+                        <a href="reportes_recibidos.html">Ver reportes</a>
+                    </li>
+                    <li>
+                        <a href="centro_Acuaticos.html">Centros Acuaticos</a>
+                    </li>
+                    <li>
+                        <a href="listasPlayasPiscina.html">Lista de playas y piscinas</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#Contactanos">CONTACTANOS</a>
+                <ul class="menu-vertical">
+                    <li>WhatsApp</li>
+                    <li>Instagram</li>
+                </ul>
+            </li>
+            <li><a href="Nosotro.html">NOSOTROS</a></li>
+            <li>
+                <a href="LoggedIndex.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="imagen de cuenta"></a>
+                <ul class="menu-vertical">
+                    <li>
+                        <a href="Configuracion.html">Configuracion De Usuario</a>
+                    </li>
+                    <li>
+                        <a href="alertas_recibidas.html">Alertas Recibidas</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Cerrar Sesion</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main class="health-history-container">
+        <aside class="sidebar">
+            <div class="menu-item active">
+                <div class="icon">
+                    <div class="triangle"></div>
+                </div>
+                <span>Historial de Salud</span>
+            </div>
+        </aside>
+        <section class="main-content">
+            <div class="date-filters">
+                <span class="date-chip">07/10/2025</span>
+                <span class="date-chip">15/10/2025</span>
+            </div>
+            <h3>Ritmo cardiaco promedio</h3>
+            <div class="chart-container">
+                <div class="y-axis">
+                    <span>150</span>
+                    <span>120</span>
+                    <span>90</span>
+                    <span>60</span>
+                    <span>30</span>
+                    <span>0</span>
+                </div>
+                <div class="chart">
+                    <div class="reference-line" style="bottom: 100%;"></div>
+                    <div class="reference-line" style="bottom: 80%;"></div>
+                    <div class="reference-line" style="bottom: 60%;"></div>
+                    <div class="reference-line" style="bottom: 40%;"></div>
+                    <div class="reference-line" style="bottom: 20%;"></div>
+                    <div class="bar" style="height: 60%;"></div>
+                    <div class="bar" style="height: 75%;"></div>
+                    <div class="bar" style="height: 50%;"></div>
+                    <div class="bar" style="height: 85%;"></div>
+                    <div class="bar" style="height: 65%;"></div>
+                    <div class="bar" style="height: 40%;"></div>
+                    <div class="bar" style="height: 70%;"></div>
+                </div>
+                <div class="x-axis">
+                    <span>50</span>
+                    <span>100</span>
+                    <span>150</span>
+                    <span>200</span>
+                    <span>250</span>
+                    <span>300</span>
+                    <span>350</span>
+                    <span>400</span>
+                </div>
+            </div>
+            <button class="search-button">Buscar</button>
+        </section>
+    </main>
+</body>
+</html>
