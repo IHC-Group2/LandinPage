@@ -79,3 +79,62 @@ function limpiarFiltros() {
     if (inputBusqueda) inputBusqueda.value = '';
     alert("Filtros limpiados.");
 }
+/* public/assets/Scripts/responsive-menu.js */
+
+/* public/assets/Scripts/responsive-menu.js */
+
+document.addEventListener('DOMContentLoaded', () => {
+    /* --- 1. Funcionalidad del Botón Hamburguesa --- */
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.menu-horizontal');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita cierres inesperados
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    }
+
+    /* --- 2. Funcionalidad de Submenús (La solución a tu problema) --- */
+    // Seleccionamos todos los items que tienen submenú
+    const menuItems = document.querySelectorAll('.menu-horizontal > li');
+
+    menuItems.forEach(item => {
+        // Buscamos si tiene un submenú dentro
+        const submenu = item.querySelector('.menu-vertical');
+        const link = item.querySelector('a');
+
+        if (submenu && link) {
+            link.addEventListener('click', (e) => {
+                // Verificamos si estamos en versión móvil (768px o menos)
+                if (window.innerWidth <= 768) {
+                    // Si el ítem NO está activo, prevenimos la navegación y lo abrimos
+                    if (!item.classList.contains('active')) {
+                        e.preventDefault(); // ¡ESTO ES LO QUE FALTABA!
+                        
+                        // Opcional: Cerrar otros menús abiertos para que no se amontonen
+                        menuItems.forEach(i => {
+                            if (i !== item) i.classList.remove('active');
+                        });
+
+                        item.classList.add('active'); // Agrega la clase que el CSS usa para mostrar
+                    } 
+                    // Si YA está activo, el segundo clic dejará que el enlace funcione (navegar)
+                }
+            });
+        }
+    });
+
+    /* --- 3. Cerrar menú al tocar fuera --- */
+    document.addEventListener('click', (e) => {
+        if (navMenu && navMenu.classList.contains('active')) {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+                // También cerrar submenús
+                menuItems.forEach(i => i.classList.remove('active'));
+            }
+        }
+    });
+});

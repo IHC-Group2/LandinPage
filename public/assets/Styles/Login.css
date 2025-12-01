@@ -63,3 +63,36 @@ input:focus {
 .btn-login:hover {
     background-color: #0d6fa1;
 }
+/* --- RESPONSIVE LOGIN (Pegar al final del archivo) --- */
+@media (max-width: 768px) {
+    .login-hero {
+        /* Quita los márgenes laterales gigantes */
+        margin: 0 !important;
+        padding: 2rem 1rem; /* Padding más pequeño */
+        width: 100%;
+        box-sizing: border-box;
+        min-height: calc(100vh - 80px); /* Ocupa la altura disponible */
+    }
+
+    .login {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login img {
+        margin: 2rem 0; /* Reduce el margen de la imagen */
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .login-form {
+        margin: 0;
+        width: 100%;
+        max-width: 350px; /* Ancho máximo para que no se estire demasiado */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}

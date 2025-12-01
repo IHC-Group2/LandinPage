@@ -12,11 +12,14 @@
 </head>
 <body>
     <nav class="top-header">
-        <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.menu-horizontal').classList.toggle('active')">
+        <button class="btn-back-nav" onclick="window.history.back()" aria-label="Volver a la página anterior">
+        &#8592; </button>
+        <button class="menu-toggle" aria-label="Abrir menú" >
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
+
         <ul class="menu-horizontal">
             <li>
                 <a href="LoggedIndex.html" class="btn-inicio">
@@ -54,13 +57,18 @@
             </li>
 
             <li>
-                <a href="#Contactanos" style="opacity: 0.8;">CONTACTO</a>
+                <a href="Contactanos.html">CONTACTO</a>
+                <ul class="menu-vertical">
+                    <li>WhatsApp</li>
+                    <li>Instagram</li>
+                </ul>
             </li>
             
             <li>
                 <a href="LoggedIndex.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="Cuenta"></a>
                 <ul class="menu-vertical">
                     <li><a href="Configuracion.html">Configuración</a></li>
+                    <li><a href="alertas_recibidas.html">Alertas</a></li>
                     <li><a href="index.html">Cerrar Sesión</a></li>
                 </ul>
             </li>

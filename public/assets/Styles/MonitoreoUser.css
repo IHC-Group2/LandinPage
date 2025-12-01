@@ -76,3 +76,41 @@
     text-decoration: none;
     color: black;
 }
+/* --- RESPONSIVE MONITOREO USER (Pegar al final) --- */
+/* --- RESPONSIVE MONITOREO USER (Pegar al final del archivo) --- */
+@media (max-width: 768px) {
+    .section-general {
+        display: flex;
+        flex-direction: column; /* Apilar verticalmente */
+        margin: 20px; /* Margen pequeño para celular */
+        gap: 30px;
+        width: auto;
+    }
+
+    .div-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .div-img {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .div-img h3 {
+        width: 100%; /* Ajustar texto al contenedor */
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0 0 20px 0;
+        height: auto;
+    }
+
+    /* Centrar botones e imágenes */
+    .btn-conect, .active-monitor {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 10px 0;
+    }
+}

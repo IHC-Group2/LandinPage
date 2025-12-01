@@ -84,3 +84,45 @@
     display: flex;
     gap: 1rem;
 }
+/* --- RESPONSIVE MAPA USUARIO (Pegar al final) --- */
+/* --- RESPONSIVE MAPA USER (Pegar al final del archivo) --- */
+@media (max-width: 768px) {
+    .section-general {
+        flex-direction: column;
+        margin: 15px;
+        gap: 20px;
+        width: auto;
+    }
+
+    .div-content {
+        width: 100%;
+    }
+
+    /* Forzar que las cajas de contenido no tengan ancho fijo */
+    .top-content, .middle-content, .botton-content {
+        width: 100% !important; 
+        box-sizing: border-box;
+    }
+
+    /* Ajustar la imagen del mapa */
+    .div-img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .div-img img {
+        width: 100%;
+        height: 300px; /* Altura controlada para móvil */
+        object-fit: cover; /* Recorta la imagen bien sin estirarla */
+        border-radius: 15px;
+    }
+
+    .bottons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-general {
+        width: 100%;
+    }
+}

@@ -110,3 +110,45 @@ input:focus {
 .btn-registration-google a{
     color: black;
 }
+/* --- RESPONSIVE REGISTRATION (Pegar al final del archivo) --- */
+@media (max-width: 768px) {
+    .registration-hero {
+        /* Quita los márgenes gigantes */
+        margin: 0 !important;
+        padding: 2rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .registration {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .registration img {
+        width: 8rem;
+        height: 8rem;
+        margin: 1rem 0;
+    }
+
+    .registration-form {
+        margin: 0;
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Ajuste específico para el botón de ir al login */
+    .btn-login {
+        width: 100%; /* Ocupar todo el ancho */
+        margin-left: 0; /* Quitar el margen izquierdo que lo descentraba */
+        margin-top: 1rem;
+    }
+    
+    .label {
+        margin-left: 0; /* Alinear etiquetas a la izquierda */
+    }
+}
