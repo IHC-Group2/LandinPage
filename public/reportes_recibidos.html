@@ -1,82 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reportes Recibidos</title>
+    <link rel="stylesheet" href="assets/Styles/validation.css">
     <link rel="stylesheet" href="assets/Styles/style.css">
     <link rel="stylesheet" href="assets/Styles/reportes_recibidos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="assets/Styles/validation.css"> </head>
 <body>
     <nav class="top-header">
         <ul class="menu-horizontal">
-            <li>
-                <a href="LoggedIndex.html" class="btn-inicio">
-                    <img src="Imagenes/logo.png" alt="Imagen de inicio">
-                </a>
-            </li>
-            <li> <a href="LoggedIndex.html">INICIO</a></li>
-            <li>
-                <a href="Monitoreo.html">MONITOREO</a>
-                <ul class="menu-vertical">
-                    <li>
-                        <a href="Entrenamiento.html">Entrenamiento</a>
-                    </li>
-                    <li>
-                        <a href="MonitoreoUser.html">Monitorear</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#Seguridad">SEGURIDAD</a>
-                <ul class="menu-vertical">
-                    <li>
-                        <a href="pronostico.html">Pronostico</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="reportes.html">MAPAS</a>
-                <ul class="menu-vertical">
-                    <li>
-                        <a href="reportes.html">Hacer un reporte</a>
-                    </li>
-                    <li>
-                        <a href="reportes_recibidos.html">Ver reportes</a>
-                    </li>
-                    <li>
-                        <a href="centro_Acuaticos.html">Centros Acuaticos</a>
-                    </li>
-                    <li>
-                        <a href="listasPlayasPiscina.html">Lista de playas y piscinas</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="Contactanos.html">CONTACTANOS</a>
-                <ul class="menu-vertical">
-                    <li>WhatsApp</li>
-                    <li>Instagram</li>
-                </ul>
-            </li>
-            <li><a href="Nosotro.html">NOSOTROS</a></li>
-            <li>
-                <a href="LoggedIndex.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="imagen de cuenta"></a>
-                <ul class="menu-vertical">
-                    <li>
-                        <a href="Configuracion.html">Configuracion De Usuario</a>
-                    </li>
-                    <li>
-                        <a href="alertas_recibidas.html">Alertas Recibidas</a>
-                    </li>
-                    <li>
-                        <a href="index.html">Cerrar Sesion</a>
-                    </li>
-                </ul>
-            </li>
+            <li><a href="LoggedIndex.html" class="btn-inicio"><img src="Imagenes/logo.png" alt="Inicio"></a></li>
+            <li><a href="LoggedIndex.html">INICIO</a></li>
+            <li><a href="Monitoreo.html">MONITOREO</a></li>
+            <li><a href="LoggedIndex.html#Seguridad">PREVENCIÓN</a></li>
+            <li><a href="reportes.html">MAPAS</a></li>
+            <li><a href="Contactanos.html">CONTACTO</a></li>
+            <li><a href="LoggedIndex.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="Cuenta"></a></li>
         </ul>
     </nav>
     <main class="reportes-main">
@@ -85,28 +26,26 @@
                 <h2>MAPA INTERACTIVO</h2>
             </div>
             <div class="busqueda-container">
-                <input type="text" value="Lima Marina Club">
+                <input type="text" placeholder="Buscar lugar..." value="Lima Marina Club">
             </div>
             <div class="filtro-alertas">
                 <span>Alertas registradas:</span>
                 <div class="filtro-accion">
                     <span>Filtrar</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.74.439L7 12.361V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5zM2 2v1.586l4.5 4.5v4.036l2 1.143V8.086l4.5-4.5V2z"/>
                     </svg>
+                    <button class="btn-limpiar" onclick="limpiarFiltros()">Limpiar X</button>
                 </div>
             </div>
             <div class="alerta-card">
                 <div class="alerta-info">
                     <h3>Oleaje intenso</h3>
-                    <p>Alertas registradas: Oleaje intenso</p>
-                    <p>Intensidad de la alerta: Alta</p>
-                    <p>Fecha de registro: 23 de octubre del 2022</p>
-                    <p>Hora de registro: 2:23PM. Hace 2 horas</p>
+                    <p>Intensidad: Alta</p>
+                    <p>Hace 2 horas</p>
                 </div>
                 <div class="alerta-reaccion">
-                    <span>👍</span>
-                    <span>👎</span>
+                    <span>👍</span><span>👎</span>
                 </div>
             </div>
         </div>
@@ -114,9 +53,10 @@
             <img src="Imagenes/mapa2.jpg" alt="Mapa">
             <div class="marcador-mapa">
                 <p>Lima Marina Club</p>
-                <p>Alerta recibida hace 2 horas.</p>
+                <p>Alerta: Oleaje Alto</p>
             </div>
         </div>
     </main>
+    <script src="assets/Scripts/main.js"></script>
 </body>
 </html>

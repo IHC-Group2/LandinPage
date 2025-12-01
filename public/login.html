@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iniciar Sesión - AquaSafe360</title>
+    <link rel="stylesheet" href="assets/Styles/validation.css">
     <link rel="stylesheet" href="assets/Styles/Login.css">
     <link rel="stylesheet" href="assets/Styles/style.css">
-</head>
+    <link rel="stylesheet" href="assets/Styles/validation.css"> </head>
 <body>
     <nav class="top-header">
         <ul class="menu-horizontal">
@@ -16,17 +17,17 @@
                 </a>
             </li>
             <li> <a href="index.html">INICIO</a></li>
-            <li> <a href="#Monitoreo">MONITOREO</a></li>
-            <li><a href="#Seguridad">SEGURIDAD</a></li>
-            <li><a href="#Mapas">MAPAS</a></li>
+            <li> <a href="index.html#Monitoreo">MONITOREO</a></li>
+            <li><a href="index.html#Seguridad">SEGURIDAD</a></li>
+            <li><a href="index.html#Mapas">MAPAS</a></li>
             <li>
-                <a href="Contactanos.html">CONTACTANOS</a>
+                <a href="index.html#Contactanos">CONTACTANOS</a>
                 <ul class="menu-vertical">
                     <li>WhatsApp</li>
                     <li>Instagram</li>
                 </ul>
             </li>
-            <li><a href="Nosotro.html">NOSOTROS</a></li>
+            <li><a href="index.html#Nosotros">NOSOTROS</a></li>
             <li>
                 <a href="login.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="imagen de cuenta"></a>
             </li>
@@ -36,27 +37,31 @@
         <section class="login-hero">
             <div class="login">
                 <img src="Imagenes/usuario.png" alt="Logo Usuario de Login">
-                <form class="login-form">
+                
+                <div id="login-success" class="success-message"></div>
+
+                <form class="login-form" onsubmit="return validateLogin(event)">
                     <div class="form-group">
-                        <span class="label">Correo Electronico:</span>
-                        <input type="email" name="email" placeholder="ejemplo@Correo" required>
+                        <span class="label">Correo Electrónico:</span>
+                        <input type="email" name="email" placeholder="ejemplo@correo.com" required autocomplete="username">
                     </div>
 
                     <div class="form-group">
                         <span class="label">Contraseña:</span>
-                        <input type="contraseña" name="contraseña" placeholder="ejemplo010">
+                        <input type="password" name="contraseña" placeholder="********" required autocomplete="current-password">
                     </div>
                     
-                    <button class="btn-login">
-                        <a href="LoggedIndex.html">Iniciar Sesion</a>
+                    <button type="submit" class="btn-login">
+                        Iniciar Sesión
                     </button>
-                    <button class="btn-login">
-                        <a href="registration.html">Registrarse</a>
-                    </button>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="registration.html" style="color: white; text-decoration: underline;">¿No tienes cuenta? Regístrate aquí</a>
+                    </div>
                 </form>
                 
             </div>
         </section>
     </main>
+    <script src="assets/Scripts/main.js"></script>
 </body>
 </html>

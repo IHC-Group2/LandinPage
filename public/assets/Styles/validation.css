@@ -1,0 +1,52 @@
+/* public/assets/Styles/validation.css */
+
+/* Estilos para mensajes de error y éxito */
+.input-error {
+    border: 2px solid #dc3545 !important; /* Rojo para errores */
+    background-color: #ffe6e6;
+}
+
+.input-success {
+    border: 2px solid #28a745 !important; /* Verde para éxito */
+}
+
+.error-text {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+.success-message {
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none; /* Oculto por defecto */
+}
+
+/* Botón de limpiar filtro (Problema #2 Usabilidad) */
+.btn-limpiar {
+    background-color: #e2e6ea;
+    border: 1px solid #ced4da;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.btn-limpiar:hover {
+    background-color: #dbe2e8;
+}
+
+/* Mejora de jerarquía en Menú (Problema #5 IA) */
+/* Resaltar elementos principales */
+.menu-highlight {
+    font-weight: 800 !important;
+    border-bottom: 2px solid #1487BF;
+}
