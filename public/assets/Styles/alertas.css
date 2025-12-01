@@ -44,3 +44,9 @@
 .alerta.grave {
     background-color: #dc3545; /* Red */
 }
+
+@media (max-width: 768px) {
+    .alertas-container {
+        width: 95%;
+    }
+}

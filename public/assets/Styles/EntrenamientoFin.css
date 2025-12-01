@@ -80,3 +80,20 @@
     text-decoration: none;
     color: black;
 }
+
+@media (max-width: 768px) {
+    .section-general {
+        flex-direction: column;
+        margin: 1rem;
+        gap: 2rem;
+    }
+    .div-img img, .div-content {
+        width: 100%;
+    }
+    .botton-content, .middle-content {
+        width: auto;
+    }
+    .div-img img {
+        height: auto;
+    }
+}

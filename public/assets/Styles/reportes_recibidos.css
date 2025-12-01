@@ -101,3 +101,58 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+
+/* --- REEMPLAZAR ESTILOS DE COLUMNA MAPA --- */
+
+.reportes-main {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+.columna-control {
+    flex: 1;
+    background-color: #50e3c2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+
+/* NUEVO ESTILO: Mapa como fondo */
+.columna-mapa {
+    flex: 2;
+    position: relative;
+    background-image: url('../../Imagenes/mapa2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.columna-mapa img {
+    display: none;
+}
+
+.marcador-mapa {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .reportes-main {
+        flex-direction: column;
+        height: auto;
+    }
+    .columna-mapa {
+        height: 50vh;
+        width: 100%;
+    }
+}

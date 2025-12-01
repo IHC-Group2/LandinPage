@@ -14,3 +14,12 @@
 .color-div{
     margin: 2rem
 }
+
+@media (max-width: 768px) {
+    .options {
+        padding-right: 0;
+    }
+    .texture-div, .color-div {
+        margin: 1rem;
+    }
+}

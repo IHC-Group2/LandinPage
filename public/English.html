@@ -12,6 +12,11 @@
 </head>
 <body>
 <nav class="top-header">
+        <div class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
         <ul class="menu-horizontal">
             <li>
                 <a href="LoggedIndex.html" class="btn-inicio">
@@ -116,5 +121,21 @@
         </div>
     </main>
 
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', () => {
+            document.querySelector('.menu-horizontal').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.menu-horizontal > li').forEach(item => {
+            if (item.querySelector('.menu-vertical')) {
+                item.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -122,3 +122,29 @@ body {
     font-size: 20px;
     width: 10rem;
 }
+
+@media (max-width: 768px) {
+    .config-container {
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+    }
+
+    .config-menu, .config-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .config-menu {
+        margin-bottom: 20px;
+    }
+    .config-header-text{
+        height: auto;
+    }
+    .options{
+        height: auto;
+    }
+    .btn-continuar{
+        margin-left: 30%;
+    }
+}

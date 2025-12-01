@@ -84,3 +84,18 @@
     width: 30px;
     height: 30px;
 }
+
+@media (max-width: 768px) {
+    .reportes-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .control-column, .map-column {
+        flex: 1 1 100%;
+    }
+
+    .map-column {
+        min-height: 300px;
+    }
+}

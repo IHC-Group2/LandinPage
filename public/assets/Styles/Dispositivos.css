@@ -106,3 +106,25 @@
     color: black;
 }
 
+@media (max-width: 768px) {
+    .section-general {
+        flex-direction: column;
+        margin: 1rem;
+        gap: 2rem;
+    }
+    .div-img, .div-content {
+        width: 100%;
+    }
+    .div-img h3 {
+        width: auto;
+        margin-right: 0;
+        text-align: center;
+    }
+    .botones-dis {
+        margin-inline-end: 0;
+    }
+    .active-monitor {
+        margin-top: 2rem;
+    }
+}
+

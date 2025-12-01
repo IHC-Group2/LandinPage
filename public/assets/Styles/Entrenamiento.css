@@ -70,3 +70,18 @@
     align-items: center;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .entrenamiento-section {
+        margin: 1rem;
+        width: auto;
+    }
+    .entrenamiento-div {
+        width: auto;
+        padding: 1rem;
+    }
+    .body-entrenamiento {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

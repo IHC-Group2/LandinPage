@@ -66,8 +66,7 @@ body{
     width: 200px;
     background-color: rgba(204, 202, 195, 0.808);
     color: black;
-    margin-top: 15px; /* Ajusta la posición */
-    top: 70%; /* Cambia margin-top por top: 100% */
+
     border-radius: 25px;
 }
 
@@ -832,4 +831,103 @@ display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-horizontal {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-horizontal.active {
+        display: flex;
+    }
+
+    .menu-horizontal > li {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .menu-vertical {
+        position: static;
+        display: none;
+        width: 100%;
+        background-color: transparent;
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    .menu-horizontal li:hover .menu-vertical {
+        display: none;
+    }
+    
+    .menu-horizontal li.active .menu-vertical {
+        display: block;
+    }
+
+    .menu-vertical li {
+        padding-left: 20px;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .hamburger-menu .line {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin: 6px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+
+/* --- AGREGAR AL FINAL DE STYLE.CSS (O BUSCAR Y CORREGIR .top-header) --- */
+
+.top-header {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    /* NUEVO: Asegura que el menú esté arriba de todo */
+    position: relative; 
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Opcional: le da un toque elegante */
+}
+
+/* Asegurar que los desplegables también estén arriba */
+.menu-vertical {
+    padding: 0;
+    position: absolute;
+    display: none;
+    width: 200px;
+    background-color: rgba(204, 202, 195, 0.95); /* Un poco más sólido para leer mejor */
+    color: black;
+    top: 100%; /* Ajuste para que salga justo debajo */
+    border-radius: 15px;
+    /* NUEVO: Capa superior */
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
