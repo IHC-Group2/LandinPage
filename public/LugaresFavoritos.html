@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lugares Favoritos - AquaSafe360</title>
     <link rel="stylesheet" href="assets/Styles/style.css">
-    <link rel="stylesheet" href="assets/Styles/EntrenamientoFin.css">
+    <link rel="stylesheet" href="assets/Styles/lugaresfav.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="top-header">
@@ -79,27 +80,35 @@
             </li>
         </ul>
     </nav>
-    <main>
-        <section class="section-general">
-            <div class="div-content">
-                <div class="top-content">
-                    <img src="Imagenes/usuario.png" alt="">
-                    <h3>Resumen Entrenamiento</h3>
-                </div>
-                <div class="botton-content">
-                    <p>Tiempo Entrenamiento Total</p>
-                    <h3>1:30 Hrs</h3>
-                    <button class="fin-entrenamiento">
-                        <a href="EntrenamientoFinDetalles.html">Ver Estadisticas</a>
-                    </button>
-                </div>
+
+    <main class="main-favoritos">
+        <section class="favoritos-container">
+            <h1 class="titulo-fav">FAVORITOS</h1>
+            
+            <div class="descripcion-box">
+                <p>Se muestra los lugares marcados como favoritos</p>
+                <p>Seleccione una ubicación para mostrar detalles:</p>
             </div>
-            <div class="div-img">
-                <a href="EntrenamientoFinDetalles.html">
-                    <img src="Imagenes/mapa.jpg" alt="">
-                </a>
+
+            <div class="seleccion-box">
+                <h2>Lugares favoritos seleccionados:</h2>
+            </div>
+
+            <div class="lista-lugares">
+                <button class="lugar-item">
+                    Lima Marina Club
+                </button>
+
+                <button class="lugar-item empty">
+                    NINGUNO
+                </button>
+
+                <button class="lugar-item empty">
+                    NINGUNO
+                </button>
             </div>
         </section>
-    </main><script src="assets/Scripts/main.js"></script>
+    </main>
+    <script src="assets/Scripts/main.js"></script>
 </body>
 </html>

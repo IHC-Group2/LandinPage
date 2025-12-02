@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
 </head>
 <body>
-<nav class="top-header">
+    <nav class="top-header">
         <button class="btn-back-nav" onclick="window.history.back()" aria-label="Volver a la página anterior">
         &#8592; </button>
-        <button class="menu-toggle" aria-label="Abrir menú" >
+        <button class="menu-toggle" aria-label="Abrir menú">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -26,38 +26,43 @@
                     <img src="Imagenes/logo.png" alt="Imagen de inicio">
                 </a>
             </li>
-            <li> <a href="LoggedIndex.html" style="opacity: 0.8;">INICIO</a></li>
+            <li> 
+                <a href="LoggedIndex.html" style="opacity: 0.8;">HOME</a>
+                <ul class="menu-vertical">
+                    <li><a href="LoggedIndex.html">NEWS</a></li>
+                </ul>
+            </li>
             
             <li>
-                <a href="Monitoreo.html" class="menu-highlight">MONITOREO EN VIVO</a>
+                <a href="Monitoreo.html" class="menu-highlight">MONITORING IN LIVE</a>
                 <ul class="menu-vertical">
-                    <li><a href="Entrenamiento.html">Entrenamiento</a></li>
-                    <li><a href="MonitoreoUser.html">Mi Estado</a></li>
-                    <li><a href="DispositivosConectados.html">Dispositivos</a></li>
+                    <li><a href="Entrenamiento.html">Tranning</a></li>
+                    <li><a href="MonitoreoUser.html">My Status</a></li>
+                    <li><a href="DispositivosConectados.html">Device</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="#Seguridad">PREVENCIÓN</a>
+                <a href="#Seguridad">PREVENCTION</a>
                 <ul class="menu-vertical">
-                    <li><a href="pronostico.html">Pronóstico</a></li>
-                    <li><a href="historial_salud.html">Historial de Salud</a></li>
-                    <li><a href="Ayuda.html">Guía de Uso</a></li>
+                    <li><a href="pronostico.html">Pronóstic</a></li>
+                    <li><a href="historial_salud.html">Healt History</a></li>
+                    <li><a href="Ayuda.html">Use Guid</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="reportes.html" class="menu-highlight">MAPAS Y LUGARES</a>
+                <a href="reportes.html" class="menu-highlight">MAPS Y PLACES</a>
                 <ul class="menu-vertical">
-                    <li><a href="reportes.html">Hacer un reporte</a></li>
-                    <li><a href="reportes_recibidos.html">Ver reportes</a></li>
-                    <li><a href="centro_Acuaticos.html">Centros Acuáticos</a></li>
-                    <li><a href="Configuracion.html">⭐ Lugares Guardados</a></li> 
+                    <li><a href="reportes.html">Make a Report</a></li>
+                    <li><a href="reportes_recibidos.html">See Reports</a></li>
+                    <li><a href="centro_Acuaticos.html">Acuatic Center</a></li>
+                    <li><a href="LugaresFavoritos.html">⭐ Save Places</a></li> 
                 </ul>
             </li>
 
             <li>
-                <a href="LoggedIndex.html">CONTACTO</a>
+                <a href="LoggedIndex.html">CONTACT</a>
                 <ul class="menu-vertical">
                     <li>WhatsApp</li>
                     <li>Instagram</li>
@@ -67,9 +72,9 @@
             <li>
                 <a href="LoggedIndex.html" class="btn-cuenta"><img src="Imagenes/usuario.png" alt="Cuenta"></a>
                 <ul class="menu-vertical">
-                    <li><a href="Configuracion.html">Configuración</a></li>
-                    <li><a href="alertas_recibidas.html">Alertas</a></li>
-                    <li><a href="index.html">Cerrar Sesión</a></li>
+                    <li><a href="Configuracion.html">Configuration</a></li>
+                    <li><a href="alertas_recibidas.html">Alerts</a></li>
+                    <li><a href="index.html">Log Out</a></li>
                 </ul>
             </li>
         </ul>
